@@ -6,39 +6,8 @@ let fetch = require('node-fetch')
 let moment = require('moment-timezone')
 let levelling = require('../lib/levelling')
 let tags = {
-  'main': 'MENU UTAMA',
-  'downloader': 'MENU DOWNLOADER',
-  'download': 'SOUNDCLOUD',
-  'sticker': 'MENU CONVERT',
-  'advanced': 'ADVANCED',
-  'absen': 'MENU ABSEN',
-  'anime': 'MENU ANIME',
-  'xp': 'MENU EXP',
-  'fun': 'MENU FUN',
-  'game': 'MENU GAME',
-  'github': 'MENU GITHUB',
-  'group': 'MENU GROUP',
-  'image': 'MENU IMAGE',
-  'info': 'MENU INFO',
-  'internet': 'INTERNET',
-  'islam' : 'MENU ISLAMI',
-  'kerang': 'MENU KERANG',
-  'maker': 'MENU MAKER',
-  'owner': 'MENU OWNER',
-  'Pengubah Suara': 'PENGUBAH SUARA',
-  'premium': 'PREMIUM MENU',
-  'quotes' : 'MENU QUOTES',
-  'rpg': 'MENU RPG',
-  'stalk': 'MENU STALK',
-  'shortlink': 'SHORT LINK',
-  'tools': 'MENU TOOLS',
-  'vote': 'MENU VOTING',
-  'nsfw': 'NSFW MENU', 
-  'asupan': 'ASUPAN MENU', 
-  'random': 'RANDOM MENU', 
-  'textpro': 'TEXT PRO MENU', 
-  'photooxy': 'PHOTO OXY MENU', 
-}
+ 'owner': 'MENU OWNER',
+ }
 const defaultMenu = {
   before: `
 ╭─「 *${global.namebot}* 」  
@@ -49,19 +18,18 @@ const defaultMenu = {
 │
 │ • Uptime: %uptime : (%muptime)
 │ • Library: Baileys
-│ • Tanggal Islam : 
+│ • Islamic date : 
 │ %dateIslamic
-│ • Hari: %week %weton
-│ • Waktu: %time
-│ • Tanggal: %date
+│ • Day: %week %weton
+│ • Time: %time
+│ • Data: %date
 │ • Version: %version
 │ • Prefix Used: *[ %p ]*
 │ • Database: %rtotalreg dari %totalreg 
 │ • Memory : ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB
-│ • RestApi's: https://bit.ly/3HLJaS3
-╰────
+ ╰────
 ╭─ 「 *USER INFO* 」
-│ • Pengguna:  %name 
+│ • Name:  %name 
 │ • Limit: %limit / day
 │ • Status: User
 │ • Exp: %totalexp
@@ -87,9 +55,9 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
     // Offset -420 is 18.00
     // Offset    0 is  0.00
     // Offset  420 is  7.00
-    const wib = moment.tz('Asia/Jakarta').format("HH:mm:ss")
-    const wita = moment.tz('Asia/Makassar').format("HH:mm:ss")
-    const wit = moment.tz('Asia/Jayapura').format("HH:mm:ss")
+    const wib = moment.tz('Asia/Karachi').format("HH:mm:ss")
+    const wita = moment.tz('Asia/Karachi').format("HH:mm:ss")
+    const wit = moment.tz('Asia/Karachi').format("HH:mm:ss")
     let weton = ['Pahing', 'Pon', 'Wage', 'Kliwon', 'Legi'][Math.floor(d / 84600000) % 5]
     let week = d.toLocaleDateString(locale, { weekday: 'long' })
     let date = d.toLocaleDateString(locale, {
@@ -184,29 +152,29 @@ const ftroli = {
                             itemCount : 9999999999999,
                             status: 1,
                             surface : 1,
-                            message: '© TioXd Official',
+                            message: '© Ibrahim',
                             orderTitle: 'MENU',
-                            thumbnail: await (await fetch('https://telegra.ph/file/f4063ab3071f5c4af765a.png')).buffer(),
+                            thumbnail: await (await fetch('https://telegra.ph/file/3b7ec1308edb07983efef.png')).buffer(),
                             sellerJid: '0@s.whatsapp.net'
           
                           }
                         }
                       }
-await conn.sendButtonImg(m.chat, await (await fetch('https://telegra.ph/file/9017b72bb209a0dadb9f5.png')).buffer(),  '•━━━━ ❮❮ *𝙱𝙾𝚃 𝙼𝙴𝙽𝚄* ❯❯ ━━━━━•', text, 'ʙᴀᴄᴋ', '.menu', m, {  
+await conn.sendButtonImg(m.chat, await (await fetch('https://telegra.ph/file/3b7ec1308edb07983efef.png')).buffer(),  '•━━━━ ❮❮ *𝙱𝙾𝚃 𝙼𝙴𝙽𝚄* ❯❯ ━━━━━•', text, 'ʙᴀᴄᴋ', '.menu', m, {  
       quoted: ftroli,  
       contextInfo: { //forwardingScore: 99999, isForwarded: true,  
           externalAdReply: {  showAdAttribution: true, 
               title: 'ʙᴏᴛ ᴡʜᴀᴛꜱᴀᴘᴘ ᴍᴜʟᴛɪ ᴀᴜᴛʜ',  
-              body: '© ᴛɪᴏxᴅ', 
-              description: 'ᴍᴀᴅᴇ ᴡɪᴛʜ ♡ ᴛɪᴏxᴅ', 
+              body: '© Ibrahim', 
+              description: 'ᴍᴀᴅᴇ ᴡɪᴛʜ ♡ Ibrahim', 
               mediaType: 2,  
-            thumbnail: await (await fetch('https://telegra.ph/file/dc5a67d724b016574129b.jpg')).buffer(), 
-           mediaUrl: `https://www.facebook.com/tio.permana.50999` 
+            thumbnail: await (await fetch('https://telegra.ph/file/3b7ec1308edb07983efef.png')).buffer(), 
+           mediaUrl: `https://www.facebook.com/login` 
           }  
        }  
       })
   } catch (e) {
-    conn.reply(m.chat, 'Maaf, menu server sedang error', m)
+    conn.reply(m.chat, 'Server error', m)
     throw e
   }
 }
@@ -229,20 +197,20 @@ function clockString(ms) {
 }
 
 function ucapan() {
-        const hour_now = moment.tz('Asia/Jakarta').format('HH')
-        var ucapanWaktu = 'Pagi'
+        const hour_now = moment.tz('Asia/Karachi').format('HH')
+        var ucapanWaktu = 'Morning'
         if (hour_now >= '03' && hour_now <= '10') {
-          ucapanWaktu = 'Pagi'
+          ucapanWaktu = 'Morning'
         } else if (hour_now >= '10' && hour_now <= '15') {
-          ucapanWaktu = 'Siang'
+          ucapanWaktu = 'Afternoon'
         } else if (hour_now >= '15' && hour_now <= '17') {
-          ucapanWaktu = 'Sore'
+          ucapanWaktu = 'Afternoon'
         } else if (hour_now >= '17' && hour_now <= '18') {
-          ucapanWaktu = 'Selamat Petang'
+          ucapanWaktu = 'Good afternoon'
         } else if (hour_now >= '18' && hour_now <= '23') {
-          ucapanWaktu = 'Malam'
+          ucapanWaktu = 'night'
         } else {
-          ucapanWaktu = 'Selamat Malam'
+          ucapanWaktu = 'Good night'
         }	
         return ucapanWaktu
 }
